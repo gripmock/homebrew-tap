@@ -9,20 +9,6 @@ class Grpctestify < Formula
 
   def install
     bin.install "grpctestify.sh" => "grpctestify"
-
-    # Generate and install bash completion
-    bash_output = `#{bin}/grpctestify --bash-completion`
-    raise "Failed to generate bash completion" if bash_output.empty?
-    bash_completion_script = "\#{buildpath}/grpctestify-bash-completion"
-    File.write(bash_completion_script, bash_output)
-    bash_completion.install bash_completion_script => "grpctestify"
-
-    # Generate and install zsh completion
-    zsh_output = `#{bin}/grpctestify --zsh-completion`
-    raise "Failed to generate zsh completion" if zsh_output.empty?
-    zsh_completion_script = "\#{buildpath}/grpctestify-zsh-completion"
-    File.write(zsh_completion_script, zsh_output)
-    zsh_completion.install zsh_completion_script => "_grpctestify"
   end
 
   test do
