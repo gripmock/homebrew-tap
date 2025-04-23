@@ -1,8 +1,8 @@
-# Homebrew Tap for GripMock
+# Homebrew Tap
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bavix/homebrew-gripmock/blob/master/LICENSE)
 
-This is a Homebrew tap repository for **GripMock**, a mock server for gRPC services. GripMock uses `.proto` files or compiled `.pb` descriptors to generate implementations of gRPC services. It is ideal for setting up end-to-end testing or as a dummy server during software development.
+This is a Homebrew tap repository for **GripMock** and other tools, a mock server for gRPC services. GripMock uses `.proto` files or compiled `.pb` descriptors to generate implementations of gRPC services. It is ideal for setting up end-to-end testing or as a dummy server during software development.
 
 ## Features
 
@@ -10,14 +10,14 @@ This is a Homebrew tap repository for **GripMock**, a mock server for gRPC servi
 - **Easy installation**: Install GripMock with a single command using Homebrew.
 - **Lightweight**: No dependencies, just download and run.
 
-## Installation
+## Installation GripMock
 
 ### Step 1: Tap the Repository
 
 To install GripMock, first tap this repository:
 
 ```bash
-brew tap bavix/homebrew-gripmock
+brew tap gripmock/homebrew
 ```
 
 ### Step 2: Install GripMock
