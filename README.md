@@ -17,7 +17,7 @@ This is a Homebrew tap repository for **GripMock** and other tools, a mock serve
 To install GripMock, first tap this repository:
 
 ```bash
-brew tap gripmock/homebrew
+brew tap gripmock/tap
 ```
 
 ### Step 2: Install GripMock
