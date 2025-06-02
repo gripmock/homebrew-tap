@@ -5,21 +5,21 @@
 class Gripmock < Formula
   desc "A mock server for gRPC services using .proto files or compiled .pb descriptors"
   homepage "https://bavix.github.io/gripmock/"
-  version "3.2.16"
+  version "3.2.17"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bavix/gripmock/releases/download/v3.2.16/gripmock_3.2.16_darwin_amd64.tar.gz"
-      sha256 "7709a7ab6a76f622a058d700d5385b335e2657ba8dc8d5d2828acbd90ceaceb4"
+      url "https://github.com/bavix/gripmock/releases/download/v3.2.17/gripmock_3.2.17_darwin_amd64.tar.gz"
+      sha256 "cbbb647358f37437a229d50eb7e6cd7f077c2ed888069dc0aa42bb72b51725c8"
 
       def install
         bin.install "gripmock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bavix/gripmock/releases/download/v3.2.16/gripmock_3.2.16_darwin_arm64.tar.gz"
-      sha256 "3662220c941e0b4e1913f6161819bf72cc81ddbda50b0173cf2bd83ac2ee2888"
+      url "https://github.com/bavix/gripmock/releases/download/v3.2.17/gripmock_3.2.17_darwin_arm64.tar.gz"
+      sha256 "ddae7d6ac591b85553f1164af492306c54fe0208eaa8d8a17bbe420cddf00040"
 
       def install
         bin.install "gripmock"
@@ -29,15 +29,15 @@ class Gripmock < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/gripmock/releases/download/v3.2.16/gripmock_3.2.16_linux_amd64.tar.gz"
-      sha256 "b7e7c9f6c462310ddc00ddca8ccce96892cc33ba9a16c9ba08607b857ffa7d87"
+      url "https://github.com/bavix/gripmock/releases/download/v3.2.17/gripmock_3.2.17_linux_amd64.tar.gz"
+      sha256 "c08ad8237f0d307e0eae23f2b0c6404c0352044e177d1c18974e480ce847bb1f"
       def install
         bin.install "gripmock"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/gripmock/releases/download/v3.2.16/gripmock_3.2.16_linux_arm64.tar.gz"
-      sha256 "9879cec4155ff77271c427ad6156801aac69bab5b5cb3e0b90df11e9c9e8d865"
+      url "https://github.com/bavix/gripmock/releases/download/v3.2.17/gripmock_3.2.17_linux_arm64.tar.gz"
+      sha256 "aa7d9643b3f254f14bb2705071cfc0342597d5068bd239e06c6a57a8b52d2bde"
       def install
         bin.install "gripmock"
       end
