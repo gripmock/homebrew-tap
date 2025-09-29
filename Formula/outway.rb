@@ -5,21 +5,21 @@
 class Outway < Formula
   desc "DNS proxy that marks destination IPs and routes by interface"
   homepage "https://github.com/bavix/outway"
-  version "1.0.7"
+  version "1.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bavix/outway/releases/download/v1.0.7/outway_1.0.7_darwin_amd64.tar.gz"
-      sha256 "37d2a2bc1207a4da93cc159d4f355e6271368a4bdc4b8b90ac02d2f3019e52d6"
+      url "https://github.com/bavix/outway/releases/download/v1.0.8/outway_1.0.8_darwin_amd64.tar.gz"
+      sha256 "a25e2ebc3c628ae56645c59f2e67eb4e17f98fa58e5599d4e2a2c0406c5bb7be"
 
       def install
         bin.install "outway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bavix/outway/releases/download/v1.0.7/outway_1.0.7_darwin_arm64.tar.gz"
-      sha256 "baaf75bcb1192cb3f3bcb508f30f7204d086cc600d82b0dac4cc92ba1e914b9c"
+      url "https://github.com/bavix/outway/releases/download/v1.0.8/outway_1.0.8_darwin_arm64.tar.gz"
+      sha256 "eb5d1efbe4e04cfba6a276ad4a9948d04a23c51f92b958d192da925726091612"
 
       def install
         bin.install "outway"
@@ -29,22 +29,22 @@ class Outway < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/outway/releases/download/v1.0.7/outway_1.0.7_linux_amd64.tar.gz"
-      sha256 "434c09e2cc4180b246e991d235c2e5df98012091ccd02c9e0710d8b3c631a32a"
+      url "https://github.com/bavix/outway/releases/download/v1.0.8/outway_1.0.8_linux_amd64.tar.gz"
+      sha256 "a68c8606b6b2ef6ccc26b345aa4ea98278306b3b55e2d748315a93edbce0dcf1"
       def install
         bin.install "outway"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/outway/releases/download/v1.0.7/outway_1.0.7_linux_arm6.tar.gz"
-      sha256 "d9ad41e469023dfc0b6d61d896a2ce4c293ac8bb1a2b83576aa9d542a45baead"
+      url "https://github.com/bavix/outway/releases/download/v1.0.8/outway_1.0.8_linux_arm6.tar.gz"
+      sha256 "6b48a105e56d379fe9acf2511935acc5c11bb25d7d886ceb4096aa70cea86a64"
       def install
         bin.install "outway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/outway/releases/download/v1.0.7/outway_1.0.7_linux_arm64.tar.gz"
-      sha256 "4c729a3df0cbbe183d025cc54c1a5f0b1691419c0595f8f74790040488d6f129"
+      url "https://github.com/bavix/outway/releases/download/v1.0.8/outway_1.0.8_linux_arm64.tar.gz"
+      sha256 "a04eafa23a7f6e70a2bae4a3517fc771102f3cc4167029bcd6b9bdf6937b5f5c"
       def install
         bin.install "outway"
       end
