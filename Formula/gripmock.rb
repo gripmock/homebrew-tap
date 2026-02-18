@@ -5,34 +5,21 @@
 class Gripmock < Formula
   desc "A mock server for gRPC services using .proto files or compiled .pb descriptors"
   homepage "https://bavix.github.io/gripmock/"
-  version "3.7.3"
+  version "3.7.6"
   license "MIT"
-
-  disable! date: "2026-02-18", because: :migrated_to_cask
-
-  def caveats
-    <<~EOS
-      gripmock has moved to a Homebrew cask.
-
-      Please migrate by running:
-
-        brew uninstall gripmock
-        brew install --cask gripmock
-    EOS
-  end
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_darwin_amd64.tar.gz"
-      sha256 "959d48c2d9689dc9376b8ef91f4ddfac306756becc61a16e6d1e63c2702757c9"
+      url "https://github.com/bavix/gripmock/releases/download/v3.7.6/gripmock_3.7.6_darwin_amd64.tar.gz"
+      sha256 "783a913df9094230eaadf6a0af9c5811469eeb6dba9f554bfdb1072d1a7d7d94"
 
       def install
         bin.install "gripmock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_darwin_arm64.tar.gz"
-      sha256 "01ae59b714fd5f5adb1e0734663e36b10958f88263fe772921559182bbaf6529"
+      url "https://github.com/bavix/gripmock/releases/download/v3.7.6/gripmock_3.7.6_darwin_arm64.tar.gz"
+      sha256 "bfef2207684ee23aa2dec30fe8a434b4a484892d04cabc95d703ed0a5c3b068c"
 
       def install
         bin.install "gripmock"
@@ -42,21 +29,30 @@ class Gripmock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_linux_amd64.tar.gz"
-      sha256 "eebf1cc4d1fa5290a221210135dfd2df3194dc3e5cd8be70d4efba93c9f81f23"
-
+      url "https://github.com/bavix/gripmock/releases/download/v3.7.6/gripmock_3.7.6_linux_amd64.tar.gz"
+      sha256 "9efde041e2ec3f57cb12c63ed415b2b0cec042feada9f3cf52be74befb4b4aac"
       def install
         bin.install "gripmock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_linux_arm64.tar.gz"
-      sha256 "52e294e14c368c1979ddc31c0384ff383ab5a1d9ee8274c143172f14948981f5"
-
+      url "https://github.com/bavix/gripmock/releases/download/v3.7.6/gripmock_3.7.6_linux_arm64.tar.gz"
+      sha256 "93dfade00fb4e995e01d265299b6becfbb74ff92cf20bb426fca14e94b7f7763"
       def install
         bin.install "gripmock"
       end
     end
+  end
+
+  deprecate! date: "2026-02-18", because: "moved to cask. Please run `brew install --cask gripmock`"
+
+  def caveats
+    <<~EOS
+      The 'gripmock' formula is deprecated and will be removed in future versions.
+      Please migrate to the cask version:
+        brew uninstall gripmock
+        brew install --cask gripmock
+    EOS
   end
 
   test do
