@@ -8,6 +8,19 @@ class Gripmock < Formula
   version "3.7.3"
   license "MIT"
 
+  disable! date: "2026-02-18", because: :migrated_to_cask
+
+  def caveats
+    <<~EOS
+      gripmock has moved to a Homebrew cask.
+
+      Please migrate by running:
+
+        brew uninstall gripmock
+        brew install --cask gripmock
+    EOS
+  end
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_darwin_amd64.tar.gz"
@@ -31,6 +44,7 @@ class Gripmock < Formula
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_linux_amd64.tar.gz"
       sha256 "eebf1cc4d1fa5290a221210135dfd2df3194dc3e5cd8be70d4efba93c9f81f23"
+
       def install
         bin.install "gripmock"
       end
@@ -38,6 +52,7 @@ class Gripmock < Formula
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/bavix/gripmock/releases/download/v3.7.3/gripmock_3.7.3_linux_arm64.tar.gz"
       sha256 "52e294e14c368c1979ddc31c0384ff383ab5a1d9ee8274c143172f14948981f5"
+
       def install
         bin.install "gripmock"
       end
