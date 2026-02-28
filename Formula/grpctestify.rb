@@ -1,20 +1,22 @@
-# Formula for Grpctestify was automatically generated via GitHub Actions from:
-# https://github.com/gripmock/grpctestify 
+# DEADLINE: 2027-12-31 - Please migrate to cask
+# brew install --cask grpctestify
+#
+# This formula is deprecated and will be removed after 2027-12-31
 
 class Grpctestify < Formula
-  desc "Utility for testing gRPC servers"
-  homepage "https://github.com/gripmock/grpctestify"
-  url "https://github.com/gripmock/grpctestify/releases/download/v1.0.0/grpctestify.sh"
-  sha256 "42675607e9c0f53993fe54e490de2a9bb3994d623e1e3b3c1086b7a59e585491"
-
-  depends_on "grpcurl"
-  depends_on "jq"
+  desc "gRPC testing utility written in Rust (deprecated - use cask)"
+  homepage "https://github.com/gripmock/grpctestify-rust"
+  url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.3.1/grpctestify-linux-amd64"
+  sha256 ""
+  version "1.3.1"
+  license "MIT"
+  deprecated! date: "2027-12-31", because: "use cask instead"
 
   def install
-    bin.install "grpctestify.sh" => "grpctestify"
+    bin.install "grpctestify-linux-amd64" => "grpctestify"
   end
 
   test do
-    assert_match "v1.0.0", shell_output("#{bin}/grpctestify --version")
+    assert_match "1.3.1", shell_output("#{bin}/grpctestify --version")
   end
 end
