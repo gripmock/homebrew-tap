@@ -3,7 +3,7 @@ cask "grpctestify" do
   name "grpctestify"
   desc "gRPC testing utility written in Rust"
   homepage "https://github.com/gripmock/grpctestify-rust"
-  version "1.3.6"
+  version "1.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,13 +15,13 @@ cask "grpctestify" do
     on_intel do
       url "https://github.com/gripmock/grpctestify-rust/releases/download/v#{version}/grpctestify-macos-amd64.tar.gz",
         verified: "github.com/gripmock/grpctestify-rust"
-      sha256 "7970605709da0711abeb9f0e5bfe17e3361dc08aa8b467f9ae0c26886e64d7ea"
+      sha256 "60ecba506e5d10fc3b562cc69fbd93abf91f221cf51f04dd3c62108a5e1a3014"
     end
 
     on_arm do
       url "https://github.com/gripmock/grpctestify-rust/releases/download/v#{version}/grpctestify-macos-arm64.tar.gz",
         verified: "github.com/gripmock/grpctestify-rust"
-      sha256 "f7856e428bd26768a54d572dd5fc42091eadf5ed88a960bdde7928394ac9bed8"
+      sha256 "be70c5338e12e9f5c12a907fb91ec3e778dffdb46c1b8da943d70de3627df972"
     end
   end
 
@@ -29,13 +29,13 @@ cask "grpctestify" do
     on_intel do
       url "https://github.com/gripmock/grpctestify-rust/releases/download/v#{version}/grpctestify-linux-amd64.tar.gz",
         verified: "github.com/gripmock/grpctestify-rust"
-      sha256 "3756a6cc05f57c9c9d4d1ef52a9ddb5045dadf9d5a3b3f9850327f248a0ca44b"
+      sha256 "c1418e4e8e7332d196e75fc20af8e231e5d5fa708c85f05ffd1490fb0f753328"
     end
 
     on_arm do
       url "https://github.com/gripmock/grpctestify-rust/releases/download/v#{version}/grpctestify-linux-arm64.tar.gz",
         verified: "github.com/gripmock/grpctestify-rust"
-      sha256 "b62aa7ebf981e5e0493e16e4b4a911dafe14a71eef014473a9f924871e907303"
+      sha256 "1617cad3a6a06dba93c968e813971ea85974ca6d89c5d811c2a1a283f5378104"
     end
   end
 
