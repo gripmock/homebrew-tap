@@ -6,9 +6,9 @@
 class Grpctestify < Formula
   desc "gRPC testing utility written in Rust (deprecated - use cask)"
   homepage "https://github.com/gripmock/grpctestify-rust"
-  url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.3.4/grpctestify-linux-amd64.tar.gz"
-  sha256 "531de12d6b8029b138187c8ec5a0bf9c2331865e8bdf9b2d8328aa784f72bb84"
-  version "1.3.4"
+  url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.3.5/grpctestify-linux-amd64.tar.gz"
+  sha256 "67b225df0e271a499ba98e6a592a2e3899d9dafc62e497d19dd1a5c91121acd1"
+  version "1.3.5"
   license "MIT"
   deprecated! date: "2027-12-31", because: "use cask instead"
 
@@ -17,6 +17,6 @@ class Grpctestify < Formula
   end
 
   test do
-    assert_match "1.3.4", shell_output("#{bin}/grpctestify --version")
+    assert_match "1.3.5", shell_output("#{bin}/grpctestify --version")
   end
 end
