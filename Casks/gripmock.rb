@@ -3,7 +3,7 @@ cask "gripmock" do
   name "gripmock"
   desc "A mock server for gRPC services using .proto files or compiled .pb descriptors"
   homepage "https://bavix.github.io/gripmock/"
-  version "3.8.3"
+  version "3.8.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "gripmock" do
     on_intel do
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/bavix/gripmock"
-      sha256 "97eccd7b1be79d24762801ce67b332be7043ecf3bcaeb1102100f220497aa652"
+      sha256 "eb33f8358bffcab53f3a21f9c29e710aa1c6531dda5375c513f86fe43d618d2b"
     end
     on_arm do
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/bavix/gripmock"
-      sha256 "6856469c0782322a96d0d9b7929f3119d05be88477317459a39c367a0a984401"
+      sha256 "4e5d17bb9d230120e37175a55e11003801039034fe67d8097495bc5897129e3c"
     end
   end
 
@@ -28,12 +28,12 @@ cask "gripmock" do
     on_intel do
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_linux_amd64.tar.gz",
         verified: "github.com/bavix/gripmock"
-      sha256 "95b3b9194fabb80c85aa3c8068d0573846a6054ba56f4d3c3e8355a568c047b4"
+      sha256 "564163751cb1762ea48b093171544df6e7b4061059ea0524a4c2024e23b9f4f4"
     end
     on_arm do
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_linux_arm64.tar.gz",
         verified: "github.com/bavix/gripmock"
-      sha256 "dbd2e1a010eed765df2beeef073c7b7d00a00193e8160f2a80ec42a9c015ed3f"
+      sha256 "9e4dc187f852c9578104e8ee6ac5f8656600a87d9e80ff23f36c8e85d7115591"
     end
   end
 
