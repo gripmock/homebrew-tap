@@ -5,13 +5,13 @@
 class Grpctestify < Formula
   desc "gRPC testing utility written in Rust"
   homepage "https://github.com/gripmock/grpctestify-rust"
-  version "1.6.1"
+  version "1.6.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.1/grpctestify-macos-amd64.tar.gz"
-      sha256 "62890efa5c6f7900e44a4b05a19e32835a9b71e5aa472018920cd12527fa5855"
+      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.2/grpctestify-macos-amd64.tar.gz"
+      sha256 "15f62d29c97e920e29767a324e6d43ea8763aeeea61e5926eed71c54f34d53ba"
 
       def install
         bin.install "grpctestify"
@@ -19,8 +19,8 @@ class Grpctestify < Formula
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.1/grpctestify-macos-arm64.tar.gz"
-      sha256 "8d64a35beb80af6b3598ed9ba78bbc5276d8709c37cb8fe8a1c3d9c0975683bb"
+      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.2/grpctestify-macos-arm64.tar.gz"
+      sha256 "e000c78ccfda7e5817bb5250472b7da8810996bdc7d4219cbdfc10d5bb4c1bb5"
 
       def install
         bin.install "grpctestify"
@@ -30,8 +30,8 @@ class Grpctestify < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.1/grpctestify-linux-amd64.tar.gz"
-      sha256 "e407aefd1f77b7705d753661de6f9160e3ab1863274c34930dedc52e8e38cc82"
+      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.2/grpctestify-linux-amd64.tar.gz"
+      sha256 "a1a7a63f91f92dc650b9a8de1a91a5649a7bdbaedacf189b6bf91adae12fb4d0"
 
       def install
         bin.install "grpctestify"
@@ -39,8 +39,8 @@ class Grpctestify < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.1/grpctestify-linux-arm64.tar.gz"
-      sha256 "4058aec112bdf03300744854734e79cd75cf4eae61208eeb7e10f32ec03f963f"
+      url "https://github.com/gripmock/grpctestify-rust/releases/download/v1.6.2/grpctestify-linux-arm64.tar.gz"
+      sha256 "5c81b9101a0a59589228c35e728cf2e632f6f5afa6aa59d02d0062fbd738195b"
 
       def install
         bin.install "grpctestify"
