@@ -2,29 +2,29 @@
 cask "gripmock" do
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "gripmock"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", staged_path/"gripmock"]
     end
   end
 
-  version "3.23.0"
+  version "3.23.1"
 
   on_macos do
     on_arm do
-      sha256 "231d657513dfff7e7ae525882af196ed235817c85cefbb9a2c32280dac22df7d"
+      sha256 "9df0f44c6992972ea86ab2f5d400915e039e5edc2b4d2edda5c56d6689642f0b"
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ccdb20c5c67b437e82d453c8ec5919146f99ba9c8c229ed25707b7ae554588a3"
+      sha256 "e3652509e84275e98b85ea41c39d44323e0acce9c8f6c68079b353a8fcaedd4b"
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "d44a49767a91e9610af02e2e28c12e8464f3fb82872e0254637e0fd2c93e0e0a"
+      sha256 "ab30063892f6a1cd3d587d60fe812d463d74993229b02695349fbb1ac92dc767"
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "8e8a0bf64494b34113464e7839e9dcd3c736788f9c33061e363b4383bfe32714"
+      sha256 "c253cacb2087b74b654b0e6bd6c03fdc0d7f6712f3de26a0cf30ddbadbc2788f"
       url "https://github.com/bavix/gripmock/releases/download/v#{version}/gripmock_#{version}_linux_amd64.tar.gz"
     end
   end
